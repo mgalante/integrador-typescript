@@ -1,7 +1,8 @@
 module.exports = {
     // Provide the path to our primary source file/module, into which
     // the rest of our modules get imported
-    entry: './src/main.ts',
+		devtool:'source-map', 
+		entry: './src/main.ts',
     output: {
         // Configure the details of our output file, once
         // the TypeScript compiler has finished transforming

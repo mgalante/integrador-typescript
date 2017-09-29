@@ -1,13 +1,13 @@
 import { AccountService } from "./account.service";
+import { AccountComponent } from "./account.component";
 
 function main(): void {
-	let accountService : AccountService = new AccountService();
-	let accounts = accountService.getAccounts();
-	console.log(accounts);
+	const accountService : AccountService = new AccountService();
+	const accountComponent : AccountComponent = new AccountComponent(accountService);	
 
 	let amount: HTMLElement | null = document.getElementById("amount");
 	if (amount !== null) {
-		amount.innerHTML = "Loaded!";
+		amount.innerHTML = accountComponent.totalAmount.toString();
 	}
 }
 

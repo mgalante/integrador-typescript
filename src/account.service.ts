@@ -1,8 +1,12 @@
 import { accounts } from "./data"
-import { Account } from "./account.model" 
+import { Account } from "./account.model"
+
 export class AccountService {
+	/**
+	 * Metodo para obterner las cuentas
+	 */
 	getAccounts() : Account[]{
-		let loadedAccounts : Account[] = accounts;
+		const loadedAccounts : Account[] = accounts;
 		return loadedAccounts;
 	}
 }
